@@ -292,7 +292,7 @@ You can use the [standard API](api-reference.md#read-model-store-interface) to c
 
 A [resolver](#resolvers) then uses the data from the store to prepare final data samples for data requests.
 
->A Read Model's projection should only use tables that were created in this Read Model's `Init` handler. If you try to access tables created in other Read Models, a “Table does not exist” error is generated.
+>A Read Model's projection should only use tables that were created in this Read Model's `Init` handler. If you try to access tables created in other Read Models, a “Table does not exist” error is generated. For cross-aggregate interaction, use [Sagas](sagas.md).
 
 Note that you can add additional logic to a projection function. For instance, you can perform SQL queries, update Elastic Search indexes, write arbitrary data to files, etc.
 
